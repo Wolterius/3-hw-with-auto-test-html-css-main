@@ -5,7 +5,8 @@
 }
 
 .container {
-    outline: 1px solid red; /* чтобы контейнер был виден, в конце можно будет удалить это св-во */
+    outline: 1px solid red;
+    /* чтобы контейнер был виден, в конце можно будет удалить это св-во */
     margin: 0 auto;
     width: 100%;
     max-width: 1440px;
@@ -71,6 +72,9 @@ header span {
 }
 
 .about-section .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
     /* 📍 Свойствa flexbox для отступов между элементами select, .info-wrapper и .skills-wrapper  */
 }
 
@@ -81,7 +85,7 @@ select {
     padding: 8px 12px;
     font-weight: 400;
     font-size: 16px;
-    appearance: none; 
+    appearance: none;
     background-image: url("./ep_arrow-down.svg");
     background-repeat: no-repeat;
     background-position: right 12px top 50%;
@@ -89,11 +93,14 @@ select {
 
 select:hover,
 .text-field:hover {
+    border: 1px solid rgba(41, 101, 241, 1);
     /* 📍 Стили для выпадающего списка и текстового поля при наведении курсора */
 }
 
 
 .info-wrapper {
+    display: flex;
+    flex-direction: row;
     /* 📍 Свойство flexbox для расположения 2-х списков в ряд */
 }
 
@@ -110,6 +117,9 @@ select:hover,
 
 .frameworks-list,
 .books-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
     /* 📍 Свойства flexbox для отступов между элементами в списках */
 }
 
@@ -121,10 +131,17 @@ select:hover,
 }
 
 .skills-block {
+    min-width: 50%;
     /* 📍 Свойства flexbox для расположения формы над элементами с классом .label */
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .skills {
+    min-width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     /* 📍 Свойства flexbox для расположения элементов с классом .label */
 }
 
@@ -167,7 +184,10 @@ form {
 }
 
 .btn:hover {
+
     /* 📍 Стили для кнопки при наведении курсора */
+    cursor: pointer;
+    background-color: rgba(41, 101, 241, 0.9);
 }
 
 .line {
@@ -179,10 +199,11 @@ table {
     border-collapse: collapse;
     font-weight: 400;
     font-size: 14px;
-    margin: 0 auto;
+    margin: 60px 570px 100px 570px;
 }
 
-th, td {
+th,
+td {
     padding: 12px 15px;
 }
 
@@ -190,6 +211,7 @@ footer {
     background-color: rgba(163, 167, 255, 0.3);
     padding: 26px 0;
     /* 📍 Свойство для расположения ссылки горизонтально по центру */
+    text-align: center;
 }
 
 .footer-link {
@@ -201,4 +223,6 @@ footer {
 
 .footer-link:hover {
     /* 📍 Стили для ссылки при наведении курсора */
+    
+ text-decoration-line: underline;
 }
