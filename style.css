@@ -32,14 +32,21 @@ header span {
     background-color: #fafaff;
     padding: 60px 0;
     min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     /* 📍 Свойства flexbox для размещения container-a вертикально по центру */
 }
 
 .main-section .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /* 📍 Свойствa flexbox для размещения блока с текстом и изображения в ряд, и центрирования их по вертикали */
 }
 
 .text-wrapper {
+    max-width: 425px;
     /* 📍 Cвойство для ограничения ширины блока с текстом в первой секции */
 }
 
